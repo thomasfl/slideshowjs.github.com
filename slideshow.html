@@ -1,0 +1,90 @@
+<html>
+<head><title>Slideshow.js</title></head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+<style>
+
+#slideshow-area, #slideshow-scroller {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#slideshow-area {
+  border: 1px solid #000;
+}
+
+#slideshow-holder {
+  height: 500px;
+}
+
+.slideshow-content {
+  width: 180px;
+  height: 300px;
+  background-color: white;
+  float: left;
+  padding: 10px;
+  margin: 0;
+  border: none;
+}
+
+/* Add a minimum of esthetics */
+
+body {
+  background-color: #a0a0a0;
+ font-family: 'Helvetica Neue', Arial, Helvetica, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: grey;
+}
+</style>
+
+<body>
+
+<a href="https://github.com/thomasfl/slideshow.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://d3nwyuy0nl342s.cloudfront.net/img/4c7dc970b89fd04b81c8e221ba88ff99a06c6b61/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub"></a>
+
+
+<h1>Slideshow.js</h1>
+
+<div id="slideshow-area">
+  <div id="slideshow-scroller">
+    <div id="slideshow-holder">
+      <div class="slideshow-content">
+             <h3>Page 1 of 3</h3>
+             <p>
+               Click 'next' to slide in the next
+               box with content. </p>
+             <p><a href="#" onclick="slideshow.showNextSlide();">Next</a></p>
+      </div>
+      <div class="slideshow-content">
+             <h3>Page 2 of 3</h3>
+             <p>
+               To add the slideshow to your page view the html source for this page
+               and read the documentation for the Slideshow class.
+             </p>
+             <p><a href="#" onclick="slideshow.showPreviousSlide();">Previous</a>
+             <a href="#" onclick="slideshow.showNextSlide();">Next</a></p>
+      </div>
+      <div class="slideshow-content">
+             <h3>Page 3 of 3</h3>
+             <p>
+               The animation effect is done with the jquery animate method.
+             </p>
+             <p><a href="#" onclick="slideshow.showPreviousSlide();">Previous</a></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="slideshow.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  slideshow = new Slideshow({holderId: 'slideshow-holder', scrollerId: 'slideshow-scroller', contentClass: 'slideshow-content'});
+</script>
+</body>
+</html>
